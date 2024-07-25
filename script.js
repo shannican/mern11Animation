@@ -1,28 +1,24 @@
-gsap.from("#page2 h1",{
-  scale:1.3,
-  opacity:0,
-  duration:0.6,
+gsap.to("img",{
+  width:'80%',
   scrollTrigger:{
-    trigger:"#page2 h1",
+    trigger:"#page2",
     scroller:"body",
-    // markers:true,
-    start:"top 50%",
-    end:"top 40%",
-    scrub:2
+    start:"top 0",
+    end:'top -80%',
+    scrub:2,
+    pin:true
   }
 })
 
-gsap.from(".card",{
-  y:130,
-  opacity:0,
-  duration:0.8,
-  stagger:0.3,
+
+gsap.to("#page3 h1",{
+  transform:'translateX(-230%)',
   scrollTrigger:{
-    trigger:".card",
+    trigger:"#page3",
     scroller:"body",
-    // markers:true,
-    start:"top 70%",
-    end:"top 50%",
-    scrub:2
+    start:"top 0",
+    end:"top -150%",
+    scrub:3,
+    pin:true
   }
 })
